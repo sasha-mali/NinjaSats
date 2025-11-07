@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "ninjasats_backend": {
+      "main": "src/ninjasats_backend/main.mo",
+      "type": "motoko"
+    },
+    "ninjasats_frontend": {
+      "dependencies": [
+        "ninjasats_backend"
+      ],
+      "source": [
+        "src/ninjasats_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "ninjasats_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
