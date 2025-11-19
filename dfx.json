@@ -1,12 +1,27 @@
 {
   "canisters": {
-    "ninjasats_backend": {
-      "main": "src/ninjasats_backend/main.mo",
+    "UserCanister": {
+      "main": "src/ninjasats_backend/UserCanister.mo",
+      "type": "motoko"
+    },
+    "TaskCanister": {
+      "main": "src/ninjasats_backend/TaskCanister.mo",
+      "type": "motoko"
+    },
+    "PaymentCanister": {
+      "main": "src/ninjasats_backend/PaymentCanister.mo",
+      "type": "motoko"
+    },
+    "DisputeCanister": {
+      "main": "src/ninjasats_backend/DisputeCanister.mo",
       "type": "motoko"
     },
     "ninjasats_frontend": {
       "dependencies": [
-        "ninjasats_backend"
+        "UserCanister",
+        "TaskCanister",
+        "PaymentCanister",
+        "DisputeCanister"
       ],
       "source": [
         "src/ninjasats_frontend/dist"
